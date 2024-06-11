@@ -1,0 +1,147 @@
+/* Reset */
+body, p, dl, dd {
+  margin: initial;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: initial;
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: top;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+ul {
+  margin: initial;
+  padding: initial;
+  list-style: none;
+}
+
+strong {
+  font-weight: inherit;
+}
+
+button {
+  all: unset;
+  display: inline-block;
+  cursor: pointer;
+}
+
+button:focus-visible {
+  outline: 2px solid blue;
+}
+
+form, input, fieldset {
+  all: unset;
+}
+
+
+/* Variables */
+:root {
+  font-size: 10px;
+  --primary: #D55C34;
+  --main-bg: #FBF4E8;
+  --black28: #282828;
+  --brown52: #524530;
+  --blackAA: #AAA;
+  --beigeE5: #E5DBC9;
+  --beigeF9: #F9F8F2;
+  /* background-color: #F9F8F2; 푸터 배경색 */ 
+  /* background-color: #B6D98F; */
+  /* background-color: #39A4D6; */
+  /* background-color: #FFF2A4; */
+  /* background-color: #D9CCE5; */
+  /* background-color: #2A7A56; */
+}
+
+
+/* Layouts */
+.l_row {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+
+/* Commons */
+.sr-only {
+  overflow: hidden;
+  position: absolute;
+  margin: -1px;
+  width: 1px;
+  height: 1px;
+  white-space: nowrap;
+  clip-path: inset(50%);
+}
+
+.button {
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 0 1em;
+  max-width: 100%;
+  border: 1px solid #4169e1;
+  text-align: center;
+  cursor: pointer;
+}
+
+.button.button_block {
+  display: block;
+  width: 100%;
+}
+
+.button.button_blue {
+  background-color: #4169e1;
+  color: #fff;
+}
+
+.button.button_white {
+  border-color: #b0c4de;
+  color: #4169e2;
+  background-color: #f8f8ff;
+}
+
+.button.button_medium {
+  border-radius: 2.25em;
+  line-height: 2.25em;
+  font-size: 16px;
+}
+
+.button.button_small {
+  border-radius: 1.85em;
+  line-height: 1.85em;
+  font-size: 14px;
+}
+
+.font_en {
+  font-family: "Montserrat", sans-serif;
+}
+
+
+/* Styles */
+body {
+  font-family: 'Pretendard', sans-serif;
+  font-size: 1.6rem;
+  position: relative;
+}
+
+body.hidden,
+body.dimmed {
+  overflow: hidden;
+} 
+
+body.dimmed::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.2);
+  cursor: url(/assets/images/ico_search.png) 28 28, auto;
+}
