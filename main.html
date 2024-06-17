@@ -5,185 +5,208 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="keywords" content="1인용리클라이너, 1인리클라이너, 소파, 1인용소파, 1인소파, 4인용소파, 가죽소파, 라이프스타일">
   <title>파찌홈</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- 폰트 -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pretendard/1.3.9/static/pretendard.css" integrity="sha512-NzqTHTrO48HsIamogmIaVhTXoSgRF24Cn+ynrNYrFuKrY0AdDbmcNieiOHsQARS/r0Gax9VwV3/rVMHs3ipUlg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/css/common.css">
-  <link rel="stylesheet" href="/assets/css/main.css">
-  <script defer src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  
+  <!-- 라이브러리 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js" integrity="sha512-Ysw1DcK1P+uYLqprEAzNQJP+J4hTx4t/3X2nbVwszao8wD+9afLjBQYjz7Uk4ADP+Er++mJoScI42ueGtQOzEA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script defer src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script defer src="/assets/js/gsap/minified/gsap.min.js"></script>
-  <script defer src="/assets/js/main.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js" integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  
+  <!-- 내부 코드 -->
+  <link rel="stylesheet" href="/assets/css/common.css">
+  <link rel="stylesheet" href="/assets/css/global.css">
+  <script defer src="/assets/js/global.js"></script>
 </head>
 <body>
-  <header class="header">
-    <div class="header-inner">
-      <h1 class="header-logo">
-        <a href="">
-          <img src="/assets/images/hd_logo.svg" alt="">
-          <span class="sr-only">파찌홈</span>
-        </a>
-      </h1>
-      <div class="pcMenu">
-        <nav class="gnb font_en">
-          <ul class="gnb-list">
-            <li><a href="" class="gnb-link">BRAND</a></li>
-            <li><a href="" class="gnb-link">SHOP</a></li>
-            <li><a href="" class="gnb-link">REVIEW</a></li>
-            <li><a href="" class="gnb-link">EVENT</a></li>
-            <li><a href="" class="gnb-link">C/S CENTER</a></li>
-          </ul>
-        </nav>
-        <nav class="authMenu">
-          <ul class="authMenu-list">
-            <li class="authMenu-item"><a href="" class="authMenu-link">로그인</a></li>
-            <li class="authMenu-item"><a href="" class="authMenu-link">회원가입</a></li>
-            <li class="authMenu-item"><a href="" class="authMenu-link">장바구니</a></li>
-            <li class="authMenu-item"><a href="" class="authMenu-link">마이페이지</a></li>
-          </ul>
-        </nav>
+  <div class="wrapper">
+    <header class="header">
+      <div class="header-inner">
+        <h1 class="header-logo">
+          <a href="">
+            <img src="/assets/images/hd_logo.svg" alt="">
+            <span class="sr_only">파찌홈</span>
+          </a>
+        </h1>
+        <div class="pcMenu">
+          <nav class="gnb font_en">
+            <ul class="gnb-list">
+              <li><a href="" class="gnb-link">BRAND</a></li>
+              <li><a href="" class="gnb-link">SHOP</a></li>
+              <li><a href="" class="gnb-link">REVIEW</a></li>
+              <li><a href="" class="gnb-link">EVENT</a></li>
+              <li><a href="" class="gnb-link">C/S CENTER</a></li>
+            </ul>
+          </nav>
+          <nav class="authMenu">
+            <ul class="authMenu-list">
+              <li class="authMenu-item"><a href="" class="authMenu-link">로그인</a></li>
+              <li class="authMenu-item"><a href="" class="authMenu-link">회원가입</a></li>
+              <li class="authMenu-item"><a href="" class="authMenu-link">장바구니</a></li>
+              <li class="authMenu-item"><a href="" class="authMenu-link">마이페이지</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="siteControls">
+          <a href="" class="storeLink">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"/></svg>
+          </a>
+          <div class="search">
+            <button type="button" class="search-open" aria-label="검색창 열기"></button>
+          </div>
+          <button type="button" class="mainMenu-open" aria-label="메뉴 열기"></button>
+        </div>
       </div>
-      <div inert class="mobileMenu">
-        <nav class="gnb font_en">
-          <ul class="gnb-list">
-            <li><a href="" class="gnb-link">BRAND</a></li>
-            <li><a href="" class="gnb-link">SHOP</a></li>
-            <li><a href="" class="gnb-link">REVIEW</a></li>
-            <li><a href="" class="gnb-link">EVENT</a></li>
-            <li><a href="" class="gnb-link">C/S CENTER</a></li>
-          </ul>
-        </nav>
-        <nav class="authMenu">
-          <ul class="authMenu-list">
-            <li class="authMenu-item"><a href="" class="authMenu-link">로그인</a></li>
-            <li class="authMenu-item"><a href="" class="authMenu-link">회원가입</a></li>
-            <li class="authMenu-item"><a href="" class="authMenu-link">장바구니</a></li>
-            <li class="authMenu-item"><a href="" class="authMenu-link">마이페이지</a></li>
-          </ul>
-        </nav>
-        <button type="button" class="mainMenu-close" aria-label="메뉴 닫기"></button>
-      </div>
-      <div class="siteControls">
-        <a href="" class="storeLink">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"/></svg>
-        </a>
-        <div class="search">
-          <button type="button" class="search-open" aria-label="검색창 열기"></button>
-          <div class="search-box">
-            <form action="" class="search-form">
-              <fieldset>
-                  <legend class="sr-only">검색</legend>
-                  <div class="search-inputGroup">
-                    <input type="search" class="search-input font_en" placeholder="SEARCH">
-                    <button type="button" class="search-button" aria-label="검색"></button>
-                    <button type="button" class="search-close" aria-label="검색창 닫기"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/></svg></button>
-                  </div>
-              </fieldset>
-            </form>
-            <div class="recommendCategory">
-              <ul class="recommendCategory-list">
-                <li><a href="">전동 리클라이너</a></li>
-                <li><a href="">수동 리클라이너</a></li>
-                <li><a href="">스윙 리클라이너</a></li>
+    </header>
+    <main class="main">
+      main content
+    </main>
+    <footer class="footer">
+      <div class="footer-inner">
+        <h2 class="footer-logo">
+          <a href="">
+            <img src="/assets/images/hd_logo.svg" alt="">
+            <span class="sr_only">파찌홈</span>
+          </a>
+        </h2>
+        <div class="footer-contents">
+          <div class="footer-section">
+            <h2 class="footer-section-title">MENU</h2>
+            <div class="footer-section-contents">
+              <nav class="footer-menu">
+                <ul>
+                  <li><a href="" class="footer-menu-link">BRAND</a></li>
+                  <li><a href="" class="footer-menu-link">SHOP</a></li>
+                  <li><a href="" class="footer-menu-link">REVIEW</a></li>
+                  <li><a href="" class="footer-menu-link">EVENT</a></li>
+                  <li><a href="" class="footer-menu-link">C/S CENTER</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+          <div class="footer-section">
+            <h2 class="footer-section-title">C/S CENTER</h2>
+            <div class="footer-section-contents">
+              <div class="csCenter">
+                <a href="tel:010-9976-1831" class="csCenter-phone">010-9976-1831</a>
+                <ul>
+                  <li class="csCenter-item">평일 10:00 - 18:00</li>
+                  <li class="csCenter-item">점심 11:30 - 13:30</li>
+                  <li class="csCenter-item">(주말 및 공휴일 정상영업)</li>
+                </ul>
+              </div>
+              <div class="sns">
+                <ul class="sns-list">
+                  <li><a href=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256C0 376 82.7 476.8 194.2 504.5V334.2H141.4V256h52.8V222.3c0-87.1 39.4-127.5 125-127.5c16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1c-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H287V510.1C413.8 494.8 512 386.9 512 256h0z"/></svg></a></li>
+                  <li><a href=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M549.7 124.1c-6.3-23.7-24.8-42.3-48.3-48.6C458.8 64 288 64 288 64S117.2 64 74.6 75.5c-23.5 6.3-42 24.9-48.3 48.6-11.4 42.9-11.4 132.3-11.4 132.3s0 89.4 11.4 132.3c6.3 23.7 24.8 41.5 48.3 47.8C117.2 448 288 448 288 448s170.8 0 213.4-11.5c23.5-6.3 42-24.2 48.3-47.8 11.4-42.9 11.4-132.3 11.4-132.3s0-89.4-11.4-132.3zm-317.5 213.5V175.2l142.7 81.2-142.7 81.2z"/></svg></a></li>
+                  <li><a href=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-section">
+            <h2 class="footer-section-title">BANK INFO</h2>
+            <div class="footer-section-contents">
+              <ul class="bankInfo">
+                <li class="bankInfo-item">기업은행 066-104029-04-011</li>
+                <li class="bankInfo-item">예금주 : 주식회사 파찌홈</li>
               </ul>
             </div>
           </div>
         </div>
-        <button type="button" class="mainMenu-open" aria-label="메뉴 열기"></button>
-      </div>
-    </div>
-  </header>
-  <main class="main">
-    main content
-  </main>
-  <footer class="footer">
-    <div class="footer-inner">
-      <h2 class="footer-logo">
-        <a href="">
-          <img src="/assets/images/hd_logo.svg" alt="">
-          <span class="sr-only">파찌홈</span>
-        </a>
-      </h2>
-      <div class="footer-contents">
-        <div class="footer-gnb">
-          <h2 class="footer-contentsTitle">MENU</h2>
-          <nav>
-            <ul>
-              <li><a href="" class="footer-gnbLink">BRAND</a></li>
-              <li><a href="" class="footer-gnbLink">SHOP</a></li>
-              <li><a href="" class="footer-gnbLink">REVIEW</a></li>
-              <li><a href="" class="footer-gnbLink">EVENT</a></li>
-              <li><a href="" class="footer-gnbLink">C/S CENTER</a></li>
-            </ul>
-          </nav>
-        </div>
-        <div class="footer-cs">
-          <h2 class="footer-contentsTitle">C/S CENTER</h2>
-          <a href="tel:010-9976-1831" class="footer-phone">010-9976-1831</a>
-          <p>평일 10:00 - 18:00</p>
-          <p>점심 11:30 - 13:30</p>
-          <p>(주말 및 공휴일 정상영업)</p>
-          <div class="sns">
-            <ul class="sns-list">
-              <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
-              <li><a href=""><i class="fa-brands fa-youtube"></i></a></li>
-              <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
-            </ul>
+        <div class="footer-info">
+          <strong class="companyName">주식회사 파찌홈</strong>
+          <div class="companyInfo">
+            <dl>
+              <dt>대표</dt>
+              <dd>이정용</dd>
+            </dl>
+            <dl>
+              <dt>사업자등록번호</dt>
+              <dd>605-88-02489</dd>
+            </dl>
+            <br>
+            <dl>
+              <dt>주소</dt>
+              <dd>경기도 고양시 일산동구 노첨길 51 파찌홈</dd>
+            </dl>
+            <dl>
+              <dt>TEL</dt>
+              <dd>010-8271-8589</dd>
+            </dl>
+            <br>
+            <dl>
+              <dt>통신판매신고</dt>
+              <dd>2023-서울서초-1948</dd>
+            </dl>
+            <dl>
+              <dt>개인정보관리자</dt>
+              <dd>이정용</dd>
+            </dl>
+            <br>
+            <dl>
+              <dt>이메일</dt>
+              <dd>pazzyhome@naver.com</dd>
+            </dl>
           </div>
-        </div>
-        <div class="footer-bank">
-          <h2 class="footer-contentsTitle">BANK INFO</h2>
-          <p>기업은행 066-104029-04-011</p>
-          <p>예금주 : 주식회사 파찌홈</p>
+          <p class="copyright">Copyright © 파찌홈 All rigths reserved. Design by PazzyHome</p>
         </div>
       </div>
-      <div class="footer-info">
-        <strong class="companyName">주식회사 파찌홈</strong>
-        <div class="companyInfo">
-          <dl>
-            <dt>대표</dt>
-            <dd>이정용</dd>
-          </dl>
-          <dl>
-            <dt>사업자등록번호</dt>
-            <dd>605-88-02489</dd>
-          </dl>
-          <br>
-          <dl>
-            <dt>주소</dt>
-            <dd>경기도 고양시 일산동구 노첨길 51 파찌홈</dd>
-          </dl>
-          <dl>
-            <dt>TEL</dt>
-            <dd>010-8271-8589</dd>
-          </dl>
-          <br>
-          <dl>
-            <dt>통신판매신고</dt>
-            <dd>2023-서울서초-1948</dd>
-          </dl>
-          <dl>
-            <dt>개인정보관리자</dt>
-            <dd>이정용</dd>
-          </dl>
-          <br>
-          <dl>
-            <dt>E - MAIL</dt>
-            <dd>pazzyhome@naver.com</dd>
-          </dl>
-        </div>
-        <p class="copyright">Copyright © 파찌홈 All rigths reserved. Design by PazzyHome</p>
+      <div class="footer-siteLink">
+        <ul class="footer-siteLink-list">
+          <li><a href="" class="footer-siteLink-item">회사소개</a></li>
+          <li><a href="" class="footer-siteLink-item">이용약관</a></li>
+          <li><a href="" class="footer-siteLink-item">개인정보처리방침</a></li>
+          <li><a href="" class="footer-siteLink-item">이용안내</a></li>
+          <li><a href="" class="footer-siteLink-item">고객센터</a></li>
+        </ul>
       </div>
+    </footer>
+  </div>
+  <div inert class="mobileMenu">
+    <nav class="gnb font_en">
+      <ul class="gnb-list">
+        <li><a href="" class="gnb-link">BRAND</a></li>
+        <li><a href="" class="gnb-link">SHOP</a></li>
+        <li><a href="" class="gnb-link">REVIEW</a></li>
+        <li><a href="" class="gnb-link">EVENT</a></li>
+        <li><a href="" class="gnb-link">C/S CENTER</a></li>
+      </ul>
+    </nav>
+    <nav class="authMenu">
+      <ul class="authMenu-list">
+        <li class="authMenu-item"><a href="" class="authMenu-link">로그인</a></li>
+        <li class="authMenu-item"><a href="" class="authMenu-link">회원가입</a></li>
+        <li class="authMenu-item"><a href="" class="authMenu-link">장바구니</a></li>
+        <li class="authMenu-item"><a href="" class="authMenu-link">마이페이지</a></li>
+      </ul>
+    </nav>
+    <button type="button" class="mainMenu-close" aria-label="메뉴 닫기"></button>
+  </div>
+  <div class="search-box">
+    <form action="" class="search-form">
+      <fieldset>
+          <legend class="sr_only">검색</legend>
+          <div class="search-inputGroup">
+            <input type="search" class="search-input font_en" placeholder="검색어를 입력하세요">
+            <button type="submit" class="search-button" aria-label="검색"></button>
+            <button type="button" class="search-close" aria-label="검색창 닫기"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/></svg></button>
+          </div>
+      </fieldset>
+    </form>
+    <div class="recommendedCategory">
+      <h2 class="recommendedCategory-title">추천검색어</h2>
+      <ul class="recommendedCategory-list">
+        <li><a href="">전동 리클라이너</a></li>
+        <li><a href="">수동 리클라이너</a></li>
+        <li><a href="">스윙 리클라이너</a></li>
+      </ul>
     </div>
-    <div class="footer-siteLink">
-      <a href="">회사소개</a>
-      <a href="">이용약관</a>
-      <a href="">개인정보처리방침</a>
-      <a href="">이용안내</a>
-      <a href="">고객센터</a>
-    </div>
-  </footer>
+  </div>
 </body>
 </html>

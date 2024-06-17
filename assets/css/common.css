@@ -1,12 +1,12 @@
 /* Reset */
 body, p, dl, dd {
-  margin: initial;
+  margin: unset;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  margin: initial;
-  font-weight: inherit;
-  font-size: inherit;
+  margin: unset;
+  font-weight: unset;
+  font-size: unset;
 }
 
 img {
@@ -15,13 +15,13 @@ img {
 }
 
 a {
-  color: inherit;
+  color: unset;
   text-decoration: inherit;
 }
 
 ul {
-  margin: initial;
-  padding: initial;
+  margin: unset;
+  padding: unset;
   list-style: none;
 }
 
@@ -41,14 +41,38 @@ button:focus-visible {
 
 form, input, fieldset {
   all: unset;
+  display: block;
 }
 
+input {
+
+}
+
+input::-ms-clear,
+input::-ms-reveal{
+	display:none;width:0;height:0;
+}
+input::-webkit-search-decoration,
+input::-webkit-search-cancel-button,
+input::-webkit-search-results-button,
+input::-webkit-search-results-decoration{
+	display:none;
+}
+
+/* Typography */
+:root {
+  font-size: 10px;
+}
+
+body {
+  font-family: 'Pretendard', sans-serif;
+  font-size: 1.6rem;
+}
 
 /* Variables */
 :root {
-  font-size: 10px;
-  --primary: #D55C34;
-  --main-bg: #FBF4E8;
+  --color-primary: #D55C34;
+  --color-main-bg: #FBF4E8;
   --black28: #282828;
   --brown52: #524530;
   --blackAA: #AAA;
@@ -60,6 +84,7 @@ form, input, fieldset {
   /* background-color: #FFF2A4; */
   /* background-color: #D9CCE5; */
   /* background-color: #2A7A56; */
+  --header-height: 81px;
 }
 
 
@@ -71,7 +96,7 @@ form, input, fieldset {
 
 
 /* Commons */
-.sr-only {
+.sr_only {
   overflow: hidden;
   position: absolute;
   margin: -1px;
@@ -88,7 +113,7 @@ form, input, fieldset {
   max-width: 100%;
   border: 1px solid #4169e1;
   text-align: center;
-  cursor: pointer;
+  font-size: 16px;
 }
 
 .button.button_block {
@@ -121,27 +146,4 @@ form, input, fieldset {
 
 .font_en {
   font-family: "Montserrat", sans-serif;
-}
-
-
-/* Styles */
-body {
-  font-family: 'Pretendard', sans-serif;
-  font-size: 1.6rem;
-  position: relative;
-}
-
-body.hidden,
-body.dimmed {
-  overflow: hidden;
-} 
-
-body.dimmed::before {
-  content: '';
-  position: fixed;
-  inset: 0;
-  width: 100%;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.2);
-  cursor: url(/assets/images/ico_search.png) 28 28, auto;
 }
